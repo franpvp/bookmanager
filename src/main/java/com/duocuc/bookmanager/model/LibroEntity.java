@@ -1,4 +1,4 @@
-package com.duocuc.bookmanager.entities;
+package com.duocuc.bookmanager.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,13 +9,13 @@ import lombok.*;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "libro")
+@Table(name = "libros")
 public class LibroEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_libro")
-    private Integer idLibro;
+    private Long id;
 
     @Column(name = "titulo", length = 50)
     private String titulo;
@@ -24,7 +24,7 @@ public class LibroEntity {
     private String autor;
 
     @Column(name = "anio_publicacion")
-    private Integer anioPublicacion;
+    private int anioPublicacion;
 
     @Column(name = "genero", length = 50)
     private String genero;
